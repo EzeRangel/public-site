@@ -14,7 +14,6 @@
     "motion-ui": "~1.2.2",
     "sass-mq": "^3.2.9",
     "what-input": "~2.0.1",
-    "swiper": "^3.4.1"
   },
   "ignore": [
     "**/.*",
