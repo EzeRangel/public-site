@@ -4,7 +4,7 @@ This is a custom workflow based on Bolt CMS and InuitCSS framework.
 
 ## Initial Setup
 
-You must have Composer installed, if you don't just run './install-composer'
+You must have Composer installed, if you don't just run `./install-composer`
 
 Once Composer is installed just run:
 
@@ -16,7 +16,7 @@ Go to `theme/base-2016_dev/source/` and run `npm start`
 
 ## Project reviews
 
-To generate a public preview for reviewing use ngrok on the project root:
+To generate a public preview for reviewing use [ngrok](https://ngrok.com/) on the project root:
 
 `ngrok http -host-header=rewrite ${PWD##*/}.dev:80`
 
