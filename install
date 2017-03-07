@@ -7,7 +7,7 @@
 # $ ./install
 
 composer update
-cd public_html/theme/base-2016_dev/source
+cd public_html/theme/base-2017_dev/source
 npm install
 cd ../../../
 echo 'All done, happy coding!'
