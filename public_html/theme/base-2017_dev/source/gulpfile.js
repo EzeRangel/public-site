@@ -23,7 +23,7 @@ var COMPATIBILITY = ['last 2 versions', 'ie >= 9'];
 var faviconDataFile = 'faviconData.json';
 var faviconBrandColor = '#5bbad5';
 var faviconBgColor = '#fff';
-var faviconSiteName = 'ANCLA';
+var faviconSiteName = 'Bolt';
 
 // File paths to various assets are defined here.
 var PATHS = {
@@ -37,8 +37,7 @@ var PATHS = {
   // ],
   javascript: [
     'bower_components/jquery/dist/jquery.js',
-    // 'bower_components/magnific-popup/dist/jquery.magnific-popup.js',
-    'bower_components/swiper/dist/js/swiper.js',
+    'bower_components/magnific-popup/dist/jquery.magnific-popup.js',
     'js/**/!(app).js',
     'js/app.js'
   ]
