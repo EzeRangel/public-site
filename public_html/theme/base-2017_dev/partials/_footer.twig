@@ -1,0 +1,21 @@
+<!-- Footer -->
+<footer>
+    <div class="o-layout">
+
+        <hr />
+        <div class="o-layout__item u-6/12@tablet">
+            <p>{{ __("This website is <a href='%url%' target='_blank' title='Sophisticated, lightweight & simple CMS'>Built with Bolt</a>.",{'%url%':'http://bolt.cm'}) }}
+            </p>
+        </div>
+        <div class="o-layout__item u-6/12@tablet">
+            {{ menu(
+                identifier = 'main',
+                template = 'partials/_sub_menu.twig',
+                params = {'withsubmenus': false, 'class': 'inline-list align-right'}
+            ) }}
+        </div>
+
+        {{ widgets('footer') }}
+
+    </div>
+</footer>

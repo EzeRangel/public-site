@@ -1,0 +1,8 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <title>Artboard 1</title>
+  <g>
+    <path id="Fill-1" d="M36.26,48H47.93v0L32,.05V46.17A5.92,5.92,0,0,0,36.26,48" fill="#149b5e"/>
+    <path id="Fill-2" d="M24,24l6.66,20h0A6,6,0,0,0,32,46.17V.05l0,0L24,24" fill="#186840"/>
+    <path id="Fill-3" d="M16,0V0L0,48v0H11.67a5.91,5.91,0,0,0,4.28-1.83A6,6,0,0,0,17.29,44h0L32,0H16" fill="#4d70a9"/>
+  </g>
+</svg>

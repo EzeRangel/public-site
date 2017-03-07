@@ -1,0 +1,131 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "22af8b681d22eec2897c0e77a98027b6",
+    "content-hash": "a0879584771a7a0b672ce5b1047befbf",
+    "packages": [
+        {
+            "name": "bobdenotter/seo",
+            "version": "v0.10.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bobdenotter/seo.git",
+                "reference": "f562dc87ed7b73220520a3679234a79fc2238dd6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bobdenotter/seo/zipball/f562dc87ed7b73220520a3679234a79fc2238dd6",
+                "reference": "f562dc87ed7b73220520a3679234a79fc2238dd6",
+                "shasum": ""
+            },
+            "require": {
+                "bolt/bolt": "^3.0"
+            },
+            "type": "bolt-extension",
+            "extra": {
+                "bolt-assets": "web",
+                "bolt-class": "Bolt\\Extension\\BobdenOtter\\Seo\\SeoExtension"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bolt\\Extension\\BobdenOtter\\Seo\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bob den Otter",
+                    "email": "bob@twokings.nl"
+                }
+            ],
+            "description": "An extension to easily manage SEO title, meta description and OG tags.",
+            "support": {
+                "source": "https://github.com/bobdenotter/seo/tree/v0.10.3",
+                "issues": "https://github.com/bobdenotter/seo/issues"
+            },
+            "time": "2016-07-07 07:56:29"
+        },
+        {
+            "name": "bolt/boltforms",
+            "version": "v3.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bolt/boltforms.git",
+                "reference": "8a0e7b5a2e4e3ff36c7b0476fc5aa8b6138a96e6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bolt/boltforms/zipball/8a0e7b5a2e4e3ff36c7b0476fc5aa8b6138a96e6",
+                "reference": "8a0e7b5a2e4e3ff36c7b0476fc5aa8b6138a96e6",
+                "shasum": ""
+            },
+            "require": {
+                "bolt/bolt": "^3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.7"
+            },
+            "suggest": {
+                "rossriley/formeditor": "A UI editor for form configuration."
+            },
+            "type": "bolt-extension",
+            "extra": {
+                "bolt-assets": "web",
+                "bolt-class": "Bolt\\Extension\\Bolt\\BoltForms\\BoltFormsExtension",
+                "bolt-icon": "icon-boltforms.png",
+                "branch-alias": {
+                    "dev-master": "3.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bolt\\Extension\\Bolt\\BoltForms\\": [
+                        "src/"
+                    ],
+                    "ReCaptcha\\": "lib/ReCaptcha/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Bolt\\Extension\\Bolt\\BoltForms\\Tests\\": "tests/",
+                    "Bolt\\Tests\\": "vendor/bolt/bolt/tests/phpunit/unit/"
+                }
+            },
+            "license": [
+                "GPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Gawain Lynch",
+                    "email": "gawain.lynch@gmail.com"
+                }
+            ],
+            "description": "Symfony Forms API for bolt",
+            "keywords": [
+                "comments",
+                "contact",
+                "forms",
+                "reCaptcha",
+                "uploads"
+            ],
+            "support": {
+                "source": "https://github.com/bolt/boltforms/tree/v3.0.3",
+                "issues": "https://github.com/bolt/boltforms/issues"
+            },
+            "time": "2016-07-19 13:42:10"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": true,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

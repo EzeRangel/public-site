@@ -1,0 +1,34 @@
+/* ==========================================================================
+   #TEXT
+   ========================================================================== */
+
+/**
+ * Text helpers.
+ */
+
+$inuit-text-directions: (
+  'left',
+  'center',
+  'right',
+  'justify',
+);
+
+@each $direction in $inuit-text-directions {
+    .u-text-#{$direction} {
+        text-align: #{$direction} !important;
+    }
+}
+
+@each $inuit-bp-name, $inuit-bp-value in $mq-breakpoints {
+    @include mq($from: $inuit-bp-name) {
+        @each $direction in $inuit-text-directions {
+            .u-text-#{$direction}\@#{$inuit-bp-name} {
+                text-align: #{$direction} !important;
+            }
+        }
+    }
+}
+
+
+
+

@@ -1,0 +1,63 @@
+/* ==========================================================================
+   #TABS
+   ========================================================================== */
+
+/**
+ * Simple tabs object
+ */
+
+.o-tabs {
+    @include inuit-clearfix();
+    list-style-type: none;
+    margin: 0;
+}
+
+    .o-tabs__item {
+        float: left;
+
+        > a {
+            display: block;
+            padding: 1.25rem 1.5rem;
+            line-height: 1;
+
+            &:focus,
+            &[aria-selected="true"] {
+                background: #e6e6e6;
+            }
+        }
+    }
+
+.o-tabs-content {
+    background: #fefefe;
+    transition: all 0.5s ease;
+    border-top: 0;
+}
+
+    .o-tabs-content__item {
+        display: none;
+        padding: 1rem;
+
+        &.is-active {
+            display: block;
+        }
+    }
+
+
+
+
+
+
+/* Size variants.
+   ========================================================================== */
+
+.o-tabs--vertical {
+    width: 100%;
+    max-width: 100%;
+
+    > .o-tabs__item {
+        width: auto;
+        float: none;
+        display: block;
+    }
+
+}

@@ -1,0 +1,14 @@
+/* ==========================================================================
+   #RESPONSIVE-HIDE
+   ========================================================================== */
+
+// Responsive hide helpers
+@each $inuit-bp-name, $inuit-bp-value in $mq-breakpoints {
+
+  @include mq($from: $inuit-bp-name) {
+    .u-hidden\@#{$inuit-bp-name} {
+      display: none !important;
+    }
+  }
+
+}

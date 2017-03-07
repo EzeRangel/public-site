@@ -1,0 +1,23 @@
+///* ========================================================================
+//   #PLACEHOLDER
+//   ======================================================================== */
+
+// Mixin to quickily style placeholders
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {
+    @content;
+  }
+
+  :-moz-placeholder {
+    @content;
+  }
+
+  ::-moz-placeholder {
+    @content;
+  }
+
+  :-ms-input-placeholder {
+    @content;
+  }
+}

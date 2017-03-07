@@ -1,0 +1,85 @@
+/* ==========================================================================
+   #ICONS
+   ========================================================================== */
+
+/**
+ * This is a brief description
+ */
+
+ [class^="icon-"], [class*=" icon-"] {
+   display: inline-block;
+   width: 1em;
+   height: 1em;
+   stroke-width: 0;
+   stroke: currentColor;
+   fill: currentColor;
+   vertical-align: middle;
+ }
+
+.icon--large {
+    width: 1.5em;
+    height: 1.5em;
+    margin-top: -0.25em;
+    margin-bottom: -0.25em;
+}
+
+.icon--huge {
+    width: 2em;
+    height: 2.2em;
+    margin-top: -0.5em;
+    margin-bottom: -0.5em;
+}
+
+.svg-icon {
+    display: inline-flex;
+    align-self: center;
+    position: relative;
+    height: 1em;
+    width: 1em;
+
+    svg {
+        height: 1em;
+        width: 1em;
+        stroke: currentColor;
+        fill: currentColor;
+        stroke-width: 0;
+    }
+
+    &.svg-baseline svg {
+        bottom: -0.125em;
+        position: absolute;
+    }
+}
+
+    .svg-icon--large {
+        &,
+        svg {
+            height: 1.5em;
+            width: 1.5em;
+        }
+    }
+
+    .svg-icon--huge {
+        &,
+        svg {
+            height: 2.2em;
+            width: 2.2em;
+        }
+    }
+
+
+
+ /* ==========================================
+ Single-colored icons can be modified like so:
+ .icon-name {
+   font-size: 32px;
+   color: red;
+ }
+ ========================================== */
+
+
+
+
+
+
+

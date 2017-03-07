@@ -1,0 +1,5 @@
+vendor
+app/database/bolt.db
+app/nut
+.DS_Store
+/extensions/local

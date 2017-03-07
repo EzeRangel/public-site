@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Before use, we need to install Node.js, Bolt.cm and Bower dependencies
+# using the following command:
+
+# Usage:
+# On root directory:
+# $ ./install
+
+composer update
+cd public_html/theme/base-2016_dev/source
+npm install
+cd ../../../
+echo 'All done, happy coding!'

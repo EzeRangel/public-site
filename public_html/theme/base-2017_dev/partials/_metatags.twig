@@ -1,0 +1,39 @@
+{# More info on Unfurling: https://goo.gl/w8R51M #}
+<!-- SEO META TAGS -->
+{% if description is not empty %}
+        <meta name="description" content="{{ description }}"/>
+{% endif %}
+{% if keywords|default('') is not empty %}
+        <meta name="keywords" content="{{ keywords }}"/>
+{% endif %}
+        <meta name="robots" content="{{ robots }}" />
+
+        <!-- GENERIC FB OPENGRAPH & TWITTER CARDS -->
+        <meta name="twitter:url"         property="og:url"         content="{{ canonical }}">
+        <meta name="twitter:title"       property="og:title"       content="{{ title }}">
+{% if description is not empty %}
+        <meta name="twitter:description" property="og:description" content="{{ description }}">
+{% endif %}
+{% if image is not empty %}
+        <meta name="twitter:image"       property="og:image"       content="{{ image }}">
+{% endif %}
+
+        <!-- SPECIFIC FACEBOOK OPEN GRAPH TAGS -->
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="{{ app.config.get('general/sitename') }}">
+        <meta property="og:locale" content="{{ app.config.get('general/locale') }}">
+
+        <!-- SPECIFIC TWITTER CARD TAGS -->
+        <meta name="twitter:card" content="summary_large_image">
+{% if theme.social.twitter.handle is not empty %}
+        <meta name="twitter:site" content="@{{ theme.social.twitter.handle }}">
+{% endif %}
+        <meta name="twitter:domain" value="{{ paths.hosturl|replace({'http://': '', 'https://': ''}) }}">
+
+{# OPTIONAL TWITTER CARD LABELS EXAMPLE #}
+{#
+        <meta name="twitter:label1" value="Opens in Theaters" />
+        <meta name="twitter:data1"  value="December 1, 2015" />
+        <meta name="twitter:label2" value="Or on demand" />
+        <meta name="twitter:data2"  value="at Hulu.com" />
+#}

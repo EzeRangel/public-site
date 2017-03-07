@@ -1,0 +1,31 @@
+/* ==========================================================================
+   #BREAKPOINTS
+   ========================================================================== */
+
+/**
+ * CSS breakpoints for use in JS
+ *
+ * Based on:
+ * https://www.lullabot.com/articles/importing-css-breakpoints-into-javascript
+ *
+ * These values will not show up in content, but can be
+ * queried by JavaScript to know which breakpoint is active.
+ * Add or remove as many breakpoints as you like.
+ */
+body {
+    &:before {
+        display: none; /* Prevent from displaying. */
+        content: "mobile";
+
+        @each $inuit-bp-name, $inuit-bp-value in $mq-breakpoints {
+            @include mq($from: $inuit-bp-name) {
+                content: "#{$inuit-bp-name}";
+            }
+        }
+    }
+}
+
+
+
+
+

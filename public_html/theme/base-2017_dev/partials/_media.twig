@@ -1,0 +1,15 @@
+{% set data = {
+    'title': config.get("contenttypes/reportes/fields/contentblocks/fields/#{item.block}/fields/#{data.fieldname}/label"),
+    'value': data.value,
+    'fieldname': data.fieldname
+} %}
+<div class="o-media c-content-block__media c-content-block__media--{{ data.fieldname }}">
+    <div class="o-media__img">
+        <div class="svg-icon svg-icon--huge svg-baseline"><svg><use xlink:href="#icon-{{ data.fieldname }}"></use></svg></div>
+    </div>
+    <div class="o-media__body o-flex-swap">
+        <h3 class="u-title u-title--spaced">{{ data.title }}</h3>
+        <p class="u-data u-data--aligned o-flex-swap__first">{{ data.value|nl2br }}</p>
+        <hr class="u-hr u-hr--small" />
+    </div>
+</div>
