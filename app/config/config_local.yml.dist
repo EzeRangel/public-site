@@ -1,0 +1,77 @@
+# Database setup. The driver can be either 'sqlite', 'mysql' or 'postgres'.
+#
+# For SQLite, only the databasename is required. However, MySQL and PostgreSQL
+# also require 'username', 'password', and optionally 'host' ( and 'port' ) if the database
+# server is not on the same host as the web server.
+#
+# If you're trying out Bolt, just keep it set to SQLite for now.
+database:
+    driver: mysql
+    databasename: database
+    username: root
+    password: admin
+    host: 127.0.0.1
+
+# Set maintenance mode on or off.
+#
+# While in maintenance mode, only users of level editor or higher can access the
+# site.
+#
+# All other visitors are presented with a notice that the site is currently
+# offline.
+#
+# The default template file can be found in /app/theme_defaults/ and overridden
+# with this option using your own theme.
+#
+# Note: If you've changed the filename, and your changes do not show up on the
+#       website, be sure to check for a config.ymlfile in your theme's folder.
+#       If a template is set there, it will override the setting here.
+maintenance_mode: false
+maintenance_template: maintenance_default.twig
+
+# Settings for caching in parts of Bolt.
+# - config:        Caches the parsed .yml files from /app/config. It's updated
+#                  immediately when one of the files changes on disk. There
+#                  should be no good reason to turn this off.
+# - templates:     Caches rendered templates.
+# - request:       Caches entire rendered pages like '/page/about', but only on
+#                  GET requests.
+# - duration:      The duration (in minutes) for the 'templates' and 'request'
+#                  options. default is 10 minutes. Note that the duration is set
+#                  on storing the cache. By lowering this value you will not
+#                  invalidate currently cached items.
+# - authenticated: Cache 'templates' and 'request' for logged-on users. In most
+#                  cases you should *NOT* enable this, because it will cause
+#                  side-effects if the website shows different content to
+#                  authenticated users.
+caching:
+    config: false
+    templates: false
+    request: false
+    duration: 10
+    authenticated: false
+    thumbnails: false
+
+# Show the 'debug' nut in the lower right corner for logged-in user. By default,
+# the debugbar is only shown to logged-in users. Use the 'debug_show_loggedoff'
+# option to show it to all users. You probably do not want to use this in a
+# production environment.
+debug: true
+developer_notices: false
+debug_show_loggedoff: true
+debug_permission_audit_mode: false
+debug_error_level: 8181 # equivalent to E_ALL &~ E_NOTICE &~ E_DEPRECATED &~ E_USER_DEPRECATED &~ E_WARNING
+# debug_error_level: 30719 # equivalent to E_ALL
+debug_enable_whoops: true # change this to false to use PHP's built-in error handling instead of Whoops
+
+# System debug logging
+# This will enable intensive logging of Silex functions and will be very hard on
+# performance and log file size.    The log file will be created in your cache
+# directory.
+#
+# Enable this for short time periods only when diagnosing system issues.
+# The level can be either: DEBUG, INFO, NOTICE, WARNING, ERROR, CRITICAL, ALERT, EMERGENCY
+debuglog:
+    enabled: false
+    filename: bolt-debug.log
+    level: DEBUG
