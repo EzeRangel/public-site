@@ -9,5 +9,5 @@
 composer update
 cd public_html/theme/base-2017_dev/source
 npm install
-cd ../../../
+cd ../../../..
 echo 'All done, happy coding!'

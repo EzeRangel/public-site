@@ -12,7 +12,7 @@ Once Composer is installed just run:
 
 ## Theme development
 
-Go to `theme/base-2016_dev/source/` and run `npm start`
+Go to `public_html/theme/base-2017_dev/source/` and run `npm start`
 
 ## Project reviews
 
@@ -22,6 +22,6 @@ To generate a public preview for reviewing use [ngrok](https://ngrok.com/) on th
 
 ## Production build
 
-On `theme/base-2016_dev/source/` directory run `npm run build`
+On `public_html/theme/base-2017_dev/source/` directory run `npm run build`
 
-See the README file in `theme/base-2016_dev/source/` to learn more about modifying the current theme.
+See the README file in `public_html/theme/base-2017_dev/source/` to learn more about modifying the current theme.
