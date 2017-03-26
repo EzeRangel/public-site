@@ -30,9 +30,16 @@
     </head>
     <body>
         {% block body %}
+            {% block header %}
+                {{ include("partials/_header.twig") }}
+            {% endblock header %}
 
-        {% block main %}
-        {% endblock main %}
+            {% block main %}
+            {% endblock main %}
+
+            {% block footer %}
+                {{ include("partials/_footer.twig") }}
+            {% endblock footer %}
 
         {% endblock body %}
 

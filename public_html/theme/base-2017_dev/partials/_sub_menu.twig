@@ -14,17 +14,17 @@
 {% macro display_menu_item(item, loop, name, withsubmenus, issubmenu, id) %}
     {% from _self import display_menu_item %}
     {% spaceless %}
-    <li class="{{ "c-nav-#{name}__#{((issubmenu|default(false)) ? 'sub')}item" }}
+    <li class="{{ "#{((issubmenu|default(false)) ? 'sub')}item" }}
         {{- (item.submenu|default(false) and withsubmenus) ? ' has-submenu' }}
         {{- " #{item.class|default('')}" }}
         {{- item|current ? ' is-active' }}">
 
-        <a class="c-nav-{{ name }}__link" href="{{ item|current ? '#0' : item.link }}" title="{{ item.title|default('')|escape }}" {%- if item.target|default(false) == 'blank' %}target="_blank" rel="noreferrer noopener"{% endif %}>
+        <a href="{{ item|current ? '#0' : item.link }}" title="{{ item.title|default('')|escape }}" {%- if item.target|default(false) == 'blank' %}target="_blank" rel="noreferrer noopener"{% endif %}>
             {{- item.label|default('-') -}}
         </a>
 
     {%- if item.submenu is defined and withsubmenus %}
-        <ul class="c-nav-{{ name }}__submenu">
+        <ul>
             {% for submenu in item.submenu %}
                 {{ display_menu_item(submenu, loop, name, null, true, id) }}
             {% endfor %}
@@ -39,7 +39,7 @@
 {% from _self import display_menu_item %}
 
 {# The main menu loop: Iterates over the items, calling `display_menu_item` #}
-<ul class="c-nav-{{ name }}__list {{ class|default('') }}">
+<ul class="{{ class|default('') }}">
 {% for item in menu %}
     {% if item.label is defined %}
         {{ display_menu_item(item, loop, name, withsubmenus, false, id) }}
