@@ -1,39 +1,35 @@
-Bolt Base-2016 Theme
+Base-2017 Theme
 ====================
 
-Base-2016 is a blank theme for Bolt, built on top of
-[Zurb Foundation for sites 6](http://foundation.zurb.com/). To learn more about
-specific Foundation components, check out the
-[Foundation 6 Documentation](http://foundation.zurb.com/sites/docs/).
+This is a blank theme for Bolt, built on top of
+[InuitCSS](https://github.com/inuitcss/inuitcss). I hardly recommend
+checking [Harry Robert's CSS Guidelines](http://cssguidelin.es/)
 
-The documentation laid in this README will cover how to get started with
-Foundation for Bolt and how some Foundation components, are integrated with
-Bolt.
-
-Features included with Base-2016
+Features included with Base-2017
 --------------------------------
 
-Base-2016 comes with all of the great features that are found in the Zurb
-Foundation framework, and a few things more. Simply put, if it works in
-Foundation, it will work in Foundation for Bolt. The theme also includes:
+Base-2017 is a simple bare theme with a basic component oriented structure.
+The goal is provide to the developer a very quick way to start a Bolt project.
+The theme includes:
 
  - Sass(scss) or CSS Versions
- - Multiple Foundation Navigation and layout options
+ - InuitCSS framework
  - Optional Bower and Gulp Support
- - And much, much more!
+ - Some basic but useful JS scripts (js testing included)
+ - ... and much more :)
 
-Requirements for Base-2016
+Requirements
 --------------------------
 
-You can use whatever you want – seriously. You can use Gulp, the
-Foundation CLI-tool, Codekit or nothing at all. It’s completely up to
-you how you decide to build your theme – Foundation for Bolt will stay
-out of your workflow as much as possible.
+As an opinionated workflow it has an predifined way to use the base
+components, but if for any reason you don't like some parts of it
+you can remove it or adapt it as you like.
+
+You can use use Gulp, Codekit or any other tool you want
+for building your theme.
 
 This theme does include Bower and Gulp files, and is optimized for a
-Gulp-based workflow. To get the most out of Foundation for Bolt, Gulp
-is highly recommended. However, if you're not using Gulp yet, you can
-also modify the compiled CSS files as is.
+Gulp-based workflow. Gulp is highly recommended.
 
 File Structure
 --------------
@@ -43,17 +39,16 @@ These are the most important files, included in this theme.
 ```
 .
 ├── css/
-│   ├── foundation.css       - The compiled Foundation CSS framework
-│   └── theme.css            - Theme-specific CSS
+│   └── main.css             - Theme-specific (... and compiled) CSS
 ├── images/                  - Image files for this theme are put here
+│   └── favicons/            - Folder used for generated favicons
 ├── js/
-│   ├── app.js               - Theme-specific Javascript
-│   ├── foundation.js        - The compiled Foundation javascript library
+│   ├── app.min.js           - Theme-specific Javascript
+│   ├── tests.js             - Compiled Mocha/Chai testing libraries
 │   └── jquery.min.js        - The jQuery javascript library
 ├── partials/
 │   ├── _aside.twig          - Partial for the sidebar. With fixed content, or widgets
 │   ├── _footer.twig         - Partial for the footer below every page
-│   ├── _fresh_install.twig  - Partial that's shown on fresh installs with some instructions
 │   ├── _header.twig         - Partial for the header banner with the site title.
 │   ├── _master.twig         - Twig template, that is uses to 'extend' all pages (See 'template inheritance')
 │   ├── _recordfooter.twig   - Partial with meta-information below a page or entry
@@ -61,9 +56,13 @@ These are the most important files, included in this theme.
 │   └── _topbar.twig         - Partial containing the top menu bar
 ├── source/
 │   ├── scss/
-│   │   ├── _settings.scss   - SCSS source file for Foundation. Is used by `css/foundation.css`
-│   │   ├── foundation.scss  - SCSS source file for Foundation. Is compiled to `scss/foundation.scss`
-│   │   └── theme.scss       - SCSS source file for the theme. Is compiled to `css/theme.css`
+│   │   ├── main.scss        - SCSS source file for the theme. It uses inuitcss and is compiled to `css/main.css`.
+│   │                            It has its own documentation.
+│   ├── js/
+│   │   ├── util.js          - Script for globally and useful scoped functions.
+│   │   ├── app.js           - Main JS theme and also scoped scripts.
+│   │   ├── test/
+│   │   │   ├── app.js       - JS testing demo file.
 │   ├── .babelrc             - Helper file for gulp / npm
 │   ├── bower.json           - Configuration for used Bower packages.
 │   ├── gulpfile.js          - Build task script for Gulp.
@@ -76,7 +75,6 @@ These are the most important files, included in this theme.
 ├── readme.md                - This file. :-)
 ├── record.twig              - Generic template used for single record pages, that don't have a specific template set.
 ├── search.twig              - Template used for listing search results.
-├── styleguide.twig          - Static page, that shows all Foundation elements on one long page. Go to `/styleguide` to see it in the browser.
 └── theme.yml                - Theme-specific configuration.
 ```
 
@@ -84,24 +82,7 @@ Installation
 ------------
 
 No need to install anything. This theme comes with Bolt. Don't forget to set
-`theme: base-2016` in your `config.yml` file, if it doesn't show up already.
-
-Getting Started
----------------
-
-This theme was developed to be as "tinker friendly" as possible. Depending on
-your area of expertise and experience with different front-end development
-techniques, you can modify the CSS of this theme on different 'levels':
-
- - If you're familiar with Foundation and gulp, you can finetune which parts of
-   Foundation are included, as well as all their settings. See the
-   `source/scss/foundation.scss` and `source/gulpfile.js` files.
- - If you do know a bit of SCSS, you can work in `source/scss/theme.scss` and
-   `source/scss/_settings.scss` files.
- - Otherwise you can just make your changes in the compiled css at `css/theme.css`.
-
-The templates themselves are the `.twig` files in the root of the theme folder,
-as well as the additional helper files in the `partials` folder.
+`theme: base-2017_dev` in your `config.yml` file, if it doesn't show up already.
 
 Modifying the HTML of the theme
 -------------------------------
@@ -189,123 +170,6 @@ The basic HTML structure, and a handful of other included partials.
                                            _master.twig
 ```
 
-Options in `theme.yml`
-----------------------
-
-This theme comes with its own configuration file, named `theme.yml`. In this
-file you can set certain specific options for the theme, such as the default
-images for the header, the position of the 'aside' sidebar, and the global
-layout.
-
-### Setting `layout:variant`
-
-You can select a global layout, which determines if the way the website looks.
-Possible options are:
-
-`centered`: Centers the layout on wide screens, so that the 'main content' is in
-the middle of the screen.
-
-```
-┌────────────────────────────────────────────────────────────────────────┐
-│ o o o      browser window                                              │
-├─────┬────────────────────────────────────────────┬───────────────┬─────┤
-│     │  Home link1 link2 link3                    │______ [Search]│     │
-│     └────────────────────────────────────────────┴───────────────┘     │
-│     ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••     │
-│     ••••••••••••••••••••••••(header image)••••••••••••••••••••••••     │
-│     ••••••••••••••••••••••••(name of site)••••••••••••••••••••••••     │
-│     ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••     │
-│       ┌──────────────────(main content)─┐ ┌────────────(aside)─┐       │
-│       │Lorem ipsum dolor sit amet       │ │Lorem ipsum dolor   │       │
-│       │                                 │ │sit amet. Consec-   │       │
-│       │Consectetur adipiscing elit. Nunc│ │tetur adipiscing.   │       │
-│       │omni virtuti vitium contrario    │ │                    │       │
-│       │nominehgpponitur. Non enim, si   │ │Latest X            │       │
-│       │malum est dolor, carere eo malo  │ │ - intellegetur     │       │
-│       └─────────────────────────────────┘ │ - Expectoque       │       │
-│       ┌─────────────────────────────────┐ │ - videantur        │       │
-│       │Lorem ipsum dolor sit amet       │ │                    │       │
-│       │                                 │ │Latest Y            │       │
-│       │Consectetur adipiscing elit. Nunc│ │ - intellegetur     │       │
-└───────┴─────────────────────────────────┴─┴────────────────────┴───────┘
-```
-
-`wide`: uses a 'wide' layout, meaning the header and top bar are streched to the
-edges of the browser on large screens:
-
-```
-┌────────────────────────────────────────────────────────────────────────┐
-│ o o o      browser window                                              │
-├────────────────────────────────────────────────────────┬───────────────┤
-│  Home link1 link2 link3                                │______ [Search]│
-├────────────────────────────────────────────────────────┴───────────────┤
-│••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••│
-│•••••••••••••••••••••••••••••(header image)•••••••••••••••••••••••••••••│
-│•••••••••••••••••••••••••••••(name of site)•••••••••••••••••••••••••••••│
-│••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••│
-│       ┌──────────────────(main content)─┐ ┌────────────(aside)─┐       │
-│       │Lorem ipsum dolor sit amet       │ │Lorem ipsum dolor   │       │
-│       │                                 │ │sit amet. Consec-   │       │
-│       │Consectetur adipiscing elit. Nunc│ │tetur adipiscing.   │       │
-│       │omni virtuti vitium contrario    │ │                    │       │
-│       │nominehgpponitur. Non enim, si   │ │Latest X            │       │
-│       │malum est dolor, carere eo malo  │ │ - intellegetur     │       │
-│       └─────────────────────────────────┘ │ - Expectoque       │       │
-│       ┌─────────────────────────────────┐ │ - videantur        │       │
-│       │Lorem ipsum dolor sit amet       │ │                    │       │
-│       │                                 │ │Latest Y            │       │
-│       │Consectetur adipiscing elit. Nunc│ │ - intellegetur     │       │
-└───────┴─────────────────────────────────┴─┴────────────────────┴───────┘
-```
-
-`boxed`: Adds a background and a border around the centered content.
-
-```
-┌────────────────────────────────────────────────────────────────────────┐
-│ o o o      browser window                                              │
-├────────────────────────────────────────────────────────────────────────┤
-│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
-│░░░░░┌────────────────────────────────────────────┬───────────────┐░░░░░│
-│░░░░░│  Home link1 link2 link3                    │______ [Search]│░░░░░│
-│░░░░░├────────────────────────────────────────────┴───────────────┤░░░░░│
-│░░░░░│••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••│░░░░░│
-│░░░░░│•••••••••••••••••••••••(header image)•••••••••••••••••••••••│░░░░░│
-│░░░░░│•••••••••••••••••••••••(name of site)•••••••••••••••••••••••│░░░░░│
-│░░░░░│••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••│░░░░░│
-│░░░░░│ ┌──────────────────(main content)─┐ ┌────────────(aside)─┐ │░░░░░│
-│░░░░░│ │Lorem ipsum dolor sit amet       │ │Lorem ipsum dolor   │ │░░░░░│
-│░░░░░│ │                                 │ │sit amet. Consec-   │ │░░░░░│
-│░░░░░│ │Consectetur adipiscing elit. Nunc│ │tetur adipiscing.   │ │░░░░░│
-│░░░░░│ │omni virtuti vitium contrario    │ │                    │ │░░░░░│
-│░░░░░│ │nominehgpponitur. Non enim, si   │ │Latest X            │ │░░░░░│
-│░░░░░│ │malum est dolor, carere eo malo  │ │ - intellegetur     │ │░░░░░│
-│░░░░░│ └─────────────────────────────────┘ │ - Expectoque       │ │░░░░░│
-│░░░░░│ ┌─────────────────────────────────┐ │ - videantur        │ │░░░░░│
-│░░░░░│ │Lorem ipsum dolor sit amet       │ │                    │ │░░░░░│
-└─────┴─┴─────────────────────────────────┴─┴────────────────────┴─┴─────┘
-```
-
-The `theme.yml` file also defines the default images, that are used in the
-header of the website. Feel free to change these for other images. A lot of
-royalty-free images to be used, can be found at
-[visualhunt.com](http://visualhunt.com).
-
-Finally, the last section defines the settings for which templates are used for
-which types of pages. The templates you will set in this config file will
-override the ones in the global app/config/config.yml, so beware!
-
-```
-# maintenance_template: maintenance_default.twig
-homepage_template: index.twig
-record_template: record.twig
-listing_template: listing.twig
-search_results_template: search.twig
-notfound: notfound.twig
-```
-
-For details on which page is used when, see the next section in this document.
-
-
 Working with the `.twig` files
 ------------------------------
 
@@ -354,7 +218,7 @@ immediately. When you're ready to deploy, and put the site in production, be
 sure to build the files and minify them:
 
 ```
-npm run-script build
+npm run build
 ```
 
 This will build the files that you can deploy, or put into your versioning
