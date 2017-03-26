@@ -53,7 +53,13 @@ contentlisting:
 # ------------------------------------------------------------------------------
 # Place your own routes here, that have a LOWER priority than the default routes.
 
-
+# This template is intended to see testing js pages, after production you MUST
+# remove this.
+tests:
+    path: /testing
+    defaults:
+        _controller: controller.frontend:template
+        template: tests
 
 # ------------------------------------------------------------------------------
 # Routes examples:

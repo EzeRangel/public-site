@@ -1,10 +1,10 @@
 var APP  = {};
 
-APP.Page = function(){
+APP.Document = function(){
   this.refreshBreakpoint();
 };
 
-APP.Page.prototype = {
+APP.Document.prototype = {
   refreshBreakpoint: function(){
     var ob       = UTIL.observable();
     var mutation = function(evt){
@@ -33,4 +33,4 @@ APP.Page.prototype = {
   }
 };
 
-new APP.Page();
+new APP.Document();

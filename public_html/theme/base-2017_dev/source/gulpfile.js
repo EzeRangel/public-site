@@ -38,10 +38,27 @@ var PATHS = {
   javascript: [
     'bower_components/jquery/dist/jquery.js',
     'bower_components/magnific-popup/dist/jquery.magnific-popup.js',
-    'js/**/!(app).js',
+    '!js/test/*',
+    'js/util.js',
     'js/app.js'
+  ],
+  tests: [
+    'node_modules/mocha/mocha.js',
+    'node_modules/chai/chai.js',
   ]
 };
+
+
+// Test task for dev environment
+gulp.task('tests', function(){
+    return gulp.src(PATHS.tests)
+        .pipe($.sourcemaps.init())
+        .pipe($.babel())
+        .pipe($.concat('tests.js'))
+        .pipe(gulp.dest('../js'))
+        .pipe($.browserSync.stream())
+    ;
+});
 
 // Combine JavaScript into one file
 // In production, the file is minified
@@ -182,6 +199,7 @@ gulp.task('default', function() {
     open: false
   });
   gulp.watch(['scss/**/*.scss'], ['theme-sass'], $.browserSync.reload);
-  gulp.watch(['js/**/*.js'], ['javascript'], $.browserSync.reload);
+  gulp.watch(['js/**/*.js', '!js/test/*.js'], ['javascript'], $.browserSync.reload);
+  gulp.watch(['js/test/*.js'], ['tests'], $.browserSync.reload);
   gulp.watch(['../**/*.twig'], $.browserSync.reload);
 });
