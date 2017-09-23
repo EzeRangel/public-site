@@ -240,9 +240,9 @@ accept_file_types: [ twig, html, js, css, scss, gif, jpg, jpeg, png, ico, zip, t
 # Keep the path simple: lowercase only, no extra slashes or other special
 # characters.
 branding:
-    name: Ancla CMS
+    name: BRAND|cms
     path: /admin
-    provided_by: [ hey@anclastudio.com, "ANCLA Studio" ]
+    provided_by: [ hola@dominio.com, "BRAND NAME" ]
     # news_source: http://news.example.org
     # news_variable: news
 
@@ -250,7 +250,7 @@ branding:
 # the debugbar is only shown to logged-in users. Use the 'debug_show_loggedoff'
 # option to show it to all users. You probably do not want to use this in a
 # production environment.
-debug: true
+debug: false
 developer_notices: false
 debug_show_loggedoff: false
 debug_permission_audit_mode: false
