@@ -4,12 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "22af8b681d22eec2897c0e77a98027b6",
-    "content-hash": "a0879584771a7a0b672ce5b1047befbf",
+    "content-hash": "7927469883c0f9e4da2b3999bbb918be",
     "packages": [
         {
             "name": "bobdenotter/seo",
-            "version": "v0.10.3",
+            "version": "0.10.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobdenotter/seo.git",
@@ -48,20 +47,20 @@
                 "source": "https://github.com/bobdenotter/seo/tree/v0.10.3",
                 "issues": "https://github.com/bobdenotter/seo/issues"
             },
-            "time": "2016-07-07 07:56:29"
+            "time": "2016-07-07T07:56:29+00:00"
         },
         {
             "name": "bolt/boltforms",
-            "version": "v3.0.3",
+            "version": "v3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/boltforms.git",
-                "reference": "8a0e7b5a2e4e3ff36c7b0476fc5aa8b6138a96e6"
+                "reference": "3d7edfe2356fd71146227211ad790a3bde20ae17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/boltforms/zipball/8a0e7b5a2e4e3ff36c7b0476fc5aa8b6138a96e6",
-                "reference": "8a0e7b5a2e4e3ff36c7b0476fc5aa8b6138a96e6",
+                "url": "https://api.github.com/repos/bolt/boltforms/zipball/3d7edfe2356fd71146227211ad790a3bde20ae17",
+                "reference": "3d7edfe2356fd71146227211ad790a3bde20ae17",
                 "shasum": ""
             },
             "require": {
@@ -97,7 +96,8 @@
                 }
             },
             "license": [
-                "GPL-3.0+"
+                "GPL-3.0+",
+                "LGPL-3.0+"
             ],
             "authors": [
                 {
@@ -114,10 +114,10 @@
                 "uploads"
             ],
             "support": {
-                "source": "https://github.com/bolt/boltforms/tree/v3.0.3",
+                "source": "https://github.com/bolt/boltforms/tree/3.1",
                 "issues": "https://github.com/bolt/boltforms/issues"
             },
-            "time": "2016-07-19 13:42:10"
+            "time": "2016-10-31T11:22:11+00:00"
         }
     ],
     "packages-dev": [],
