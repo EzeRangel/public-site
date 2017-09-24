@@ -1,13 +1,12 @@
 <!-- Header bar -->
 
-{# the values in the 'app.config' object are taken directly from the file app/config/config.yml #}
-<header>
-	<div class="o-wrapper">
-		<div class="headertitle">
-			<h2>{{ app.config.get('general/sitename') }}</h2>
-			    {% if app.config.get('general/payoff') %}
-			        <p>{{ app.config.get('general/payoff') }}</p>
-			    {% endif %}
-		</div>
-	</div>
+<header class="c-topbar">
+    <nav class="c-site-nav">
+        <ul class="c-site-nav__list">
+            <li class="c-site-nav__item"><a class="c-site-nav__link" href="#about">About</a></li>
+            <li class="c-site-nav__item"><a class="c-site-nav__link" href="#experience">experience</a></li>
+            <li class="c-site-nav__item"><a class="c-site-nav__link" href="#projects">projects</a></li>
+            <li class="c-site-nav__item"><a class="c-site-nav__link" href="#contact">contact</a></li>
+        </ul>
+    </nav>
 </header>

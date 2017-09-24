@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {# make sure we always display a proper title: The record's title if there is one, appended with the
-       sitename. If there is no title, we append the sitename with the payoff, if there is one. #}
+        {# make sure we always display a proper title: The record's title if there is one, appended with the
+        sitename. If there is no title, we append the sitename with the payoff, if there is one. #}
         <title>
         {%- if seo is defined -%}
             {{- seo.title() -}}
@@ -16,6 +16,7 @@
         {%- endif -%}
         </title>
 
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Playfair+Display" rel="stylesheet">
         <link rel="stylesheet" href="{{ paths.theme }}css/main.css">
         {% block headincludes %}
         {% endblock headincludes %}

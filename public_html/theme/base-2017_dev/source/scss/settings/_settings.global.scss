@@ -6,5 +6,15 @@
 // need to be made available to the entire codebase.
 
 // Standardise some UI treatments.
-$global-radius: 3px !default;
+$global-radius: 0px;
 $global-transition: (1/3) + s !default;
+
+// Colours
+$blue: #425BB5;
+$black: #333;
+
+// Shorcuts for sizing
+$unit: $inuit-global-spacing-unit;
+$unit-small: $inuit-global-spacing-unit-small;
+$unit-large: $inuit-global-spacing-unit-large;
+$unit-huge: $inuit-global-spacing-unit-huge;

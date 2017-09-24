@@ -1,0 +1,20 @@
+/* ==========================================================================
+   #MASTHEAD
+   ========================================================================== */
+
+.c-masthead{
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+    .c-masthead__img{
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .c-masthead__body{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }

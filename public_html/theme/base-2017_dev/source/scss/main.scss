@@ -1,18 +1,19 @@
 /* ==========================================================================
-   INUITCSS
+   MY WEBSITE
    ========================================================================== */
 
 /**
- * inuitcss, by @csswizardry
+ * inuitcss by @csswizardry
  *
  * github.com/inuitcss | inuitcss.com
  */
 
 /**
- * This is an example inuitcss manifest file. DO NOT MODIFY THIS FILE DIRECTLY.
- * Instead, copy and paste it into your own CSS directory and make additions,
- * extensions, and modifications there.
- */
+* This is the centre of the css basecode
+* below you're going to find all the imports and files
+* the site needs to look awesome. The architecture is
+* heavily based on Harry Roberts' ITCSS
+*/
 
 /**
  * CONTENTS
@@ -23,8 +24,6 @@
  * Global...............Project-wide variables and settings.
  *
  * TOOLS
- * Rem..................Tools for converting pixel inputs into their rem
- *                      equivalents.
  * Font-size............A mixin which guarantees baseline-friendly line-heights.
  * Clearfix.............Micro clearfix mixin.
  * Hidden...............Mixin for hiding elements.
@@ -65,13 +64,15 @@
  * Block................Image-on-top-of-text object.
  * Ratio................A container for maintaining aspect ratio of content.
  * Crop.................Provide a cropping context for media (images, etc.).
- * Tables...............Classes for manipulating `table`s.
+ * Table................Classes for manipulating `table`s.
  * Pack.................Pack items into available horizontal space.
  * Tabs.................Simple tabs object.
  *
  * COMPONENTS
- * Buttons..............An example button component, and how it fits into the
- *                      inuitcss framework.
+ * Topbar...............The fixed bar navigation.
+ * Site-nav.............Main site navigation.
+ * Masthead.............Homepage introduction.
+ * Page-section.........Common styles for inner-sections.
  *
  * SCOPES
  * Cms..................An example scope to overwrite CSS styles.
@@ -80,16 +81,21 @@
  * Clearfix.............Bind our clearfix onto a utility class.
  * Widths...............Simple width helper classes.
  * Headings.............Reassigning our heading styles to helper classes.
- * Spacing..............Nudge bits of the DOM around with these spacing
+ * Spacings.............Nudge bits of the DOM around with these spacing
  *                      classes.
  * Print................Reset-like styles taken from the HTML5 Boilerplate.
  * Hide.................Helper classes to hide content.
+ * Titles...............Define common heading & titles styles.
  * Responsive Hide......Responsive hide helpers.
  * Text Align...........Text alignment helpers.
+ * Tricks...............Very specific tweaks and semi-components.
  */
 
 // SETTINGS
 @import "settings/settings.config";
+
+$inuit-global-font-size:    14px;
+$inuit-global-line-height:  24px;
 @import "../bower_components/inuitcss/settings/settings.core";
 @import "settings/settings.global";
 
@@ -98,7 +104,6 @@
 
 
 // TOOLS
-@import "../bower_components/inuitcss/tools/tools.rem";
 @import "../bower_components/inuitcss/tools/tools.font-size";
 @import "../bower_components/inuitcss/tools/tools.clearfix";
 @import "../bower_components/inuitcss/tools/tools.hidden";
@@ -127,6 +132,10 @@
 // ELEMENTS
 @import "../bower_components/inuitcss/elements/elements.page";
 @import "elements/elements.page";
+
+$inuit-font-size-h1:  50px;
+$inuit-font-size-h2:  40px;
+$inuit-font-size-h3:  24px;
 @import "../bower_components/inuitcss/elements/elements.headings";
 @import "../bower_components/inuitcss/elements/elements.images";
 @import "../bower_components/inuitcss/elements/elements.tables";
@@ -149,7 +158,7 @@
 @import "../bower_components/inuitcss/objects/objects.block";
 @import "../bower_components/inuitcss/objects/objects.ratio";
 @import "../bower_components/inuitcss/objects/objects.crop";
-@import "../bower_components/inuitcss/objects/objects.tables";
+@import "../bower_components/inuitcss/objects/objects.table";
 @import "../bower_components/inuitcss/objects/objects.pack";
 
 
@@ -159,7 +168,10 @@
 // COMPONENTS
 //
 // Build and include your project’s UI Compoments here.
-@import "components/components.buttons";
+@import "components/components.topbar";
+@import "components/components.site-nav";
+@import "components/components.masthead";
+@import "components/components.page-section";
 
 
 
@@ -167,8 +179,8 @@
 
 
 // SCOPES
-// 
-// Any css style you don't have the control you want. 
+//
+// Any css style you don't have the control you want.
 // i.e: A js plugin theme or CMS styles.
 @import "scopes/scopes.cms";
 
@@ -182,8 +194,10 @@ $inuit-fractions: 1 2 3 4 5 7 12;
 $inuit-offsets: true;
 @import "../bower_components/inuitcss/utilities/utilities.widths";
 @import "../bower_components/inuitcss/utilities/utilities.headings";
-@import "../bower_components/inuitcss/utilities/utilities.spacing";
+@import "../bower_components/inuitcss/utilities/utilities.spacings";
 @import "../bower_components/inuitcss/utilities/utilities.print";
 @import "../bower_components/inuitcss/utilities/utilities.hide";
+@import "utilities/utilities.titles";
 @import "utilities/utilities.responsive-hide";
 @import "utilities/utilities.text-align";
+@import "utilities/utilities.tricks";

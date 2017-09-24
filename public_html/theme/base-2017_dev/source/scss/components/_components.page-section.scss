@@ -1,8 +1,8 @@
 /* ==========================================================================
-   #PAGE
+   #PAGE-SECTION
    ========================================================================== */
-body{
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    color: $black;
+
+.c-page-section{
+    padding: $unit-huge 0;
+    position: relative;
 }

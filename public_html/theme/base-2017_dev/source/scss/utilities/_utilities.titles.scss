@@ -1,0 +1,31 @@
+/* ==========================================================================
+   #TITLES
+   ========================================================================== */
+
+.u-heading,
+.u-title{
+    font-family: "Playfair Display", 'Times New Roman', Times, serif;
+    color: $black;
+}
+
+.u-heading{
+    @include inuit-font-size(80px, 70px);
+}
+
+.u-subtitle{
+    color: $blue;
+    position: relative;
+    margin-left: 40px;
+    margin-bottom: $unit-small;
+
+    &:before{
+        content: "";
+        display: block;
+        height: 2px;
+        width: 30px;
+        position: absolute;
+        top: 11px;
+        left: -40px;
+        background-color: $blue;
+    }
+}

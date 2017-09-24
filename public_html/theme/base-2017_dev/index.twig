@@ -2,20 +2,37 @@
 
 {% block main %}
 
-    <div class="o-wrapper">
-        <div class="o-box o-box--large">
-            <h5>Hola.</h5>
-            <p>This is a blank example theme. Is intended for devs and theme designers, from now on you can modify it like you want.</p>
-            <ul>
-                <li>You may want to keep an eye in the Gulp options</li>
-                <li>The source files are in the <tt>/source</tt> folder</li>
-                <li>The theme's CSS is heavily based on <a href="https://github.com/inuitcss/inuitcss" target="_bank" rel="noopener">InuitCSS</a>, we recommend you to check the docs, or the theme source code ;)</li>
-                <li>The <a href="https://docs.bolt.cm/3.2/getting-started/introduction">Bolt CMS</a> docs</li>
-                <li>The <a href="http://twig.sensiolabs.org/doc/2.x/">Twig</a> template docs</li>
-            </ul>
+    <div class="c-masthead" data-stellar-background-ratio="0.5">
+        <img src="{{ asset('images/home-background.jpg', 'theme') }}" alt="" class="c-masthead__img">
+        <div class="o-wrapper">
+            <div class="c-masthead__body">
+                <h4 class="u-subtitle">Ezequiel Rangel</h4>
+                <h1 class="u-heading">
+                    Frontend &amp;
+                    <br>
+                    CSS Architect
+                </h1>
+            </div>
         </div>
     </div>
-
+    <section id="sobre-mi" class="c-page-section">
+        <div class="o-wrapper">
+            <div class="o-layout o-layout--large o-layout--middle">
+                <div class="o-layout__item u-1/2@desktop">
+                    <h4 class="u-subtitle">01</h4>
+                    <h1 class="u-title">Acerca de mí</h1>
+                    <div class="h-50"></div>
+                    <p>Appropriately maintain standards compliant total linkage with cutting-edge action items. Enthusiastically create seamless synergy rather than excellent value. Quickly promote premium strategic theme areas vis-a-vis.</p>
+                    <p>Appropriately maintain standards compliant total linkage with cutting-edge action items. Enthusiastically create seamless synergy rather than excellent value.</p>
+                    <div class="h-50"></div> <img src="img/Signature.svg" width="230" alt="" />
+                </div>
+                <div class="o-layout__item u-1/2@desktop">
+                    <span class="u-about-border"></span>
+                    <img src="{{ asset('images/acerca-de-mi.jpg', 'theme') }}" width="400" alt="Imagen ilustrativa sobre mí" align="right" />
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock main %}
 
 {% block bottomincludes %}

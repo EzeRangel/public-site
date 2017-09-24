@@ -1,0 +1,29 @@
+/* ==========================================================================
+   #SITE-NAV
+   ========================================================================== */
+
+.c-site-nav{
+    text-align: center;
+}
+
+    .c-site-nav__list{
+        list-style: none;
+    }
+
+        .c-site-nav__item{
+            display: inline-block;
+        }
+
+            .c-site-nav__link{
+                @include inuit-font-size(12px);
+                font-weight: 700;
+                color: $black;
+                text-transform: uppercase;
+                text-decoration: none;
+                padding: 0 $unit;
+
+                &.current,
+                &:hover{
+                    color: $blue;
+                }
+            }
