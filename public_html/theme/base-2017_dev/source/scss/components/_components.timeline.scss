@@ -1,0 +1,88 @@
+/* ==========================================================================
+   #TIMELINE
+   ========================================================================== */
+
+.c-timeline{
+    margin: 0;
+    list-style: none;
+    margin-left: $unit;
+}
+
+    .c-timeline__node{
+        padding-bottom: $unit-large;
+        padding-left: $unit-large + $unit;
+        border-left: 2px solid #000;
+        position: relative;
+
+        &:before,
+        &:after{
+            content: "";
+            display: inline-block;
+            position: absolute;
+            transform: rotate(45deg);
+            transition: transform 0.8s ease;
+        }
+
+        &:before{
+            width: 15px;
+            height: 15px;
+            background-color: #425BB5;
+            top: 0;
+            left: -8px;
+            z-index: 1;
+        }
+
+        &:after{
+            width: 30px;
+            height: 30px;
+            background-color: #f3f3f3;
+            top: -8px;
+            left: -14px;
+        }
+
+
+        //Hover effects
+        &:hover .c-timeline__meta{
+            box-shadow: inset 40em 0 0 0 $blue;
+        }
+
+        &:hover:before,
+        &:hover:after{
+            transform: rotate(135deg);
+        }
+    }
+
+            .c-timeline__meta{
+                @include inuit-font-size(13px);
+                padding: 3px $unit-small;
+                margin-bottom: $unit;
+                display: inline-block;
+                color: #FFF;
+                font-weight: 600;
+                background-color: #000;
+                position: relative;
+                box-shadow: inset 0 0 0 0em $blue;
+                transition: box-shadow 0.5s ease-in;
+            }
+
+            .c-timeline__title{
+                @include inuit-font-size($inuit-font-size-h3);
+                font-weight: 400;
+                margin-bottom: $unit-tiny;
+            }
+
+            .c-timeline__subtitle{
+                @include inuit-font-size(16px);
+                margin-bottom: $unit-large;
+            }
+
+            .c-timeline__content{
+                > h1,
+                > h2,
+                > h3,
+                > h4,
+                > h5{
+                    @include inuit-font-size(15px);
+                    margin-bottom: $unit-tiny;
+                }
+            }

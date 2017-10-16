@@ -6,6 +6,7 @@
 .u-title{
     font-family: "Playfair Display", 'Times New Roman', Times, serif;
     color: $black;
+    margin-bottom: $unit-large;
 }
 
 .u-heading{
@@ -17,6 +18,7 @@
     position: relative;
     margin-left: 40px;
     margin-bottom: $unit-small;
+    letter-spacing: 1px;
 
     &:before{
         content: "";
