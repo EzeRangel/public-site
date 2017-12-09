@@ -33,4 +33,31 @@ APP.Document.prototype = {
   }
 };
 
+//
+
+APP.Interactions = function(){
+    this.setTopBarAnimation();
+};
+
+APP.Interactions.prototype = {
+    setTopBarAnimation: () => {
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 1.0
+        };
+
+        const animation = () => {
+            const topbar = document.querySelector('.c-topbar');
+            topbar.classList.toggle('is-static');
+        };
+
+        const target = document.querySelector('.c-masthead');
+
+        const observer = new IntersectionObserver(animation, options);
+        observer.observe(target);
+    }
+};
+
 new APP.Document();
+new APP.Interactions();

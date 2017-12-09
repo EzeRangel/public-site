@@ -4,6 +4,15 @@
 .c-topbar{
     position: fixed;
     width: 100%;
-    padding: $unit 0;
-    z-index: 1;
+    padding: $unit-small 0;
+    background-color: #FFF;
+    border-bottom: 1px solid $gray;
+    z-index: 3;
+    transition: background-color 1s ease, padding .5s ease-in-out;
+
+    &.is-static{
+        padding: $unit 0;
+        background-color: transparent;
+        border: none;
+    }
 }

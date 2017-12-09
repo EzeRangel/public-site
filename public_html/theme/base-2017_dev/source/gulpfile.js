@@ -36,6 +36,7 @@ var PATHS = {
   //   'bower_components/motion-ui/src/'
   // ],
   javascript: [
+    'node_modules/intersection-observer/intersection-observer.js',
     'bower_components/jquery/dist/jquery.js',
     'bower_components/magnific-popup/dist/jquery.magnific-popup.js',
     '!js/test/*',

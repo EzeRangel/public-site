@@ -8,6 +8,7 @@
 
     .c-site-nav__list{
         list-style: none;
+        margin: 0;
     }
 
         .c-site-nav__item{
@@ -15,7 +16,7 @@
         }
 
             .c-site-nav__link{
-                @include inuit-font-size(12px);
+                @include inuit-font-size(11px);
                 font-weight: 700;
                 color: $black;
                 text-transform: uppercase;
