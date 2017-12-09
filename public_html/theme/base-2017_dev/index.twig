@@ -2,19 +2,7 @@
 
 {% block main %}
 
-    <div class="c-masthead">
-        <img src="{{ asset('images/home-background.jpg', 'theme') }}" alt="" class="c-masthead__img">
-        <div class="o-wrapper">
-            <div class="c-masthead__body">
-                <h4 class="u-subtitle">Ezequiel Rangel</h4>
-                <h1 class="u-heading">
-                    Frontend &amp;
-                    <br>
-                    CSS Architect
-                </h1>
-            </div>
-        </div>
-    </div>
+    {% include 'partials/_header.twig' %}
     <section id="sobre-mi" class="c-page-section">
         <div class="o-wrapper">
             <div class="o-layout o-layout--large o-layout--middle">
