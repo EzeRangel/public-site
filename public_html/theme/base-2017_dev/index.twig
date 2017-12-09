@@ -2,7 +2,7 @@
 
 {% block main %}
 
-    <div class="c-masthead" data-stellar-background-ratio="0.5">
+    <div class="c-masthead">
         <img src="{{ asset('images/home-background.jpg', 'theme') }}" alt="" class="c-masthead__img">
         <div class="o-wrapper">
             <div class="c-masthead__body">
@@ -70,6 +70,58 @@
                     </div>
                 </li>
             </ul>
+        </div>
+    </section>
+    <section id="contacto" class="c-page-section">
+        <div class="o-wrapper">
+            <div class="o-layout">
+                <div class="o-layout__item u-1/3@desktop">
+                    <h4 class="u-subtitle">03</h4>
+                    <h1 class="u-title">Contacto</h1>
+                    <div class="c-social-profile">
+                        <p class="c-social-profile__item">
+                            Email
+                            <span class="c-social-profile__data">
+                                <a href="mailto:ezerangel@live.com">ezerangel@live.com</a>
+                            </span>
+                        </p>
+                        <p class="c-social-profile__item">
+                            Sígueme en
+                            <span class="c-social-profile__data">
+                                <a href="https://www.instagram.com/eze.rangel/" target="_blank">Instagram</a>
+                                <a href="https://twitter.com/El_Semantico" target="_blank">Twitter</a>
+                                <a href="https://github.com/EzeRangel" target="_blank">Github</a>
+                                <a href="https://codepen.io/EzeRangel/" target="_blank">Codepen</a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="o-layout__item u-2/3@desktop">
+                    <div class="u-margin-bottom-large u-margin-top-large u-padding-top-small">
+                        <p>
+                            Si tienes alguna idea que crees que te pueda ayudar, una pregunta o solo quieres saludar
+                            envíame un mensaje; yo encantado de platicar contigo.
+                        </p>
+                    </div>
+                    <form action="#" class="c-form">
+                        <div class="c-form__field">
+                            <label for="name">Nombre</label>
+                            <input id="name" type="text" class="c-form__input" />
+                        </div>
+                        <div class="c-form__field">
+                            <label for="email">Email</label>
+                            <input id="email" type="email" class="c-form__input" />
+                        </div>
+                        <div class="c-form__field">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" cols="30" rows="10" class="c-form__input"></textarea>
+                        </div>
+                        <div class="c-form__field">
+                            <button class="c-form__submit">Enviar mensaje</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 {% endblock main %}

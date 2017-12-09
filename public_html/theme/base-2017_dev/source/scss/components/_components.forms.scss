@@ -1,0 +1,50 @@
+/* ==========================================================================
+   #FORMS
+   ========================================================================== */
+
+.c-form{
+    position: relative;
+    display: block;
+}
+
+    .c-form__field{
+        margin-bottom: $unit-small;
+
+        label{
+            @include font-size(16px);
+            display: block;
+            cursor: pointer;
+            margin-bottom: $unit-tiny;
+        }
+    }
+
+        .c-form__input{
+            display: inline-block;
+            width: 100%;
+            padding: $unit-small;
+            border: 1px solid #adadad;
+            border-radius: 2px;
+            background-color: #FFF;
+            font-family: 'Lato', sans-serif;
+            color: #444;
+            resize: none;
+            transition: all .3s ease;
+
+            &:focus{
+                border-color: $blue;
+            }
+        }
+
+        .c-form__submit{
+            display: inline-block;
+            width: 100%;
+            border: none;
+            border-radius: 2px;
+            padding: $unit-small 0;
+            cursor: pointer;
+            background-color: $blue;
+            color: #FFF;
+            text-transform: uppercase;
+            font-family: 'Lato', sans-serif;
+            font-weight: 500;
+        }

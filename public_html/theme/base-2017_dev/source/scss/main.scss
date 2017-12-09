@@ -74,6 +74,8 @@
  * Masthead.............Homepage introduction.
  * Page-section.........Common styles for inner-sections.
  * Timeline.............My Experience timeline component.
+ * Social-profile.......Contact information on footer.
+ * Forms................Form styles.
  *
  * SCOPES
  * Cms..................An example scope to overwrite CSS styles.
@@ -174,6 +176,8 @@ $inuit-font-size-h3:  24px;
 @import "components/components.masthead";
 @import "components/components.page-section";
 @import "components/components.timeline";
+@import "components/components.social-profile";
+@import "components/components.forms";
 
 
 

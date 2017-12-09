@@ -1,0 +1,23 @@
+/* ==========================================================================
+   #SOCIAL PROFILE
+   ========================================================================== */
+
+.c-social-profile{
+    padding: $unit 0;
+}
+
+    .c-social-profile__item{
+        @include font-size($inuit-font-size-h3);
+    }
+
+        .c-social-profile__data{
+            display: block;
+            margin-top: $unit-tiny;
+
+            a{
+                @include font-size(14px);
+                display: inline-block;
+                color: inherit;
+                text-decoration: none;
+            }
+        }
