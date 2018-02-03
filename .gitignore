@@ -13,7 +13,7 @@ app/config/config_local.yml
 bolt-latest.tar.gz
 changelog.md
 composer.lock
-public_html/files/*
+public/files/*
 # Uncomment to include user uploaded files
 #!files/**/
 index.php

@@ -1,2 +1,2 @@
 paths:
-    web: '%site%/public_html'
+    web: '%site%/public'

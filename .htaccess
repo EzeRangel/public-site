@@ -2,16 +2,16 @@
   RewriteEngine on
 
   # Map http://www.example.com to /public_html.
-  RewriteRule ^$ /public_html/ [L]
+  RewriteRule ^$ /public/ [L]
 
-  # Map http://www.example.com/x to /public_html/x unless there is a x in the web root.
+  # Map http://www.example.com/x to /public/x unless there is a x in the web root.
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_URI} !^/public_html/
-  RewriteRule ^(.*)$ /public_html/$1
+  RewriteCond %{REQUEST_URI} !^/public/
+  RewriteRule ^(.*)$ /public/$1
 
-  # Add trailing slash to directories within public_html
+  # Add trailing slash to directories within public
   # This does not expose the internal URL.
   RewriteCond %{SCRIPT_FILENAME} -d
-  RewriteRule ^public_html/(.*[^/])$ http://www.example.com/$1/ [R=301]
+  RewriteRule ^public/(.*[^/])$ http://www.example.com/$1/ [R=301]
 </IfModule>
