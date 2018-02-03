@@ -1,13 +1,15 @@
 <!-- Header bar -->
+{% setcontent masthead = 'block/masthead' %}
+
 <header class="c-masthead">
-    <img src="{{ asset('images/home-background.jpg', 'theme') }}" alt="" class="c-masthead__img">
+    <img src="{{ masthead.image|image }}" alt="{{ masthead.image.title }}" class="c-masthead__img">
     <div class="o-wrapper">
         <div class="c-masthead__body">
-            <h4 class="u-subtitle">Ezequiel Rangel</h4>
+            <h4 class="u-subtitle">{{ masthead.title }}</h4>
             <h1 class="u-heading">
-                Frontend &amp;
+                Consultor &amp;
                 <br>
-                CSS Architect
+                Arquitecto Frontend
             </h1>
         </div>
     </div>

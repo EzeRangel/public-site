@@ -240,9 +240,9 @@ accept_file_types: [ twig, html, js, css, scss, gif, jpg, jpeg, png, ico, zip, t
 # Keep the path simple: lowercase only, no extra slashes or other special
 # characters.
 branding:
-    name: BRAND|cms
+    name: cms
     path: /admin
-    provided_by: [ hola@dominio.com, "BRAND NAME" ]
+    provided_by: [ ezerangel@live.com, "EzeRangel" ]
     # news_source: http://news.example.org
     # news_variable: news
 

@@ -11,4 +11,8 @@
     position: absolute;
     top: 20%;
     margin-left: $unit-large;
+
+    + img{
+        float: right;
+    }
 }

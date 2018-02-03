@@ -84,6 +84,50 @@ entries:
     recordsperpage: 10
 
 
+jobs:
+    name: Jobs
+    slug: jobs
+    singular_name: Job
+    singular_slug: job
+    fields:
+        company:
+            type: text
+            class: large
+            required: true
+            label: "Empresa"
+            error: "El campo es obligatorio"
+        slug:
+            type: slug
+            uses: [company]
+        area:
+            type: text
+            class: large
+            required: true
+            error: "El campo es obligatorio"
+        position:
+            type: text
+            class: large
+            label: "Puesto"
+        body:
+            type: textarea
+            height: 100
+            required: true
+            label: "Contenido"
+            error: "El campo es obligatorio"
+        duration:
+            type: text
+            variant: inline
+            required: true
+            label: "Duración"
+            error: "El campo es obligatorio"
+    show_on_dashboard: true
+    default_status: draft
+    searchable: false
+    viewless: true
+    sort: -datepublish
+
+
+
 # The 'Showcases' is not particularly useful in most cases, but it does a good
 # job of showcasing most of the available fieldtypes. Feel free to delete it, or
 # copy some fields to your own contenttypes.
@@ -220,7 +264,7 @@ blocks:
             postfix: "Use this to add a link for this Block. This could either be an 'internal' link like <tt>page/about</tt>, if you use a contenttype/slug combination. Otherwise use a proper URL, like `http://example.org`."
         image:
             type: image
-            attrib: title
+            attrib: [title, alt]
             extensions: [ gif, jpg, png ]
     show_on_dashboard: true
     viewless: true

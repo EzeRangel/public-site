@@ -4,59 +4,41 @@
 
     {% include 'partials/_header.twig' %}
     <section id="sobre-mi" class="c-page-section">
+        {% setcontent about = "block/acerca" %}
         <div class="o-wrapper">
             <div class="o-layout o-layout--large o-layout--middle">
                 <div class="o-layout__item u-1/2@desktop">
                     <h4 class="u-subtitle">01</h4>
-                    <h1 class="u-title">Acerca de mí</h1>
-                    <p>Appropriately maintain standards compliant total linkage with cutting-edge action items. Enthusiastically create seamless synergy rather than excellent value. Quickly promote premium strategic theme areas vis-a-vis.</p>
-                    <p>Appropriately maintain standards compliant total linkage with cutting-edge action items. Enthusiastically create seamless synergy rather than excellent value.</p>
+                    <h1 class="u-title">{{ about.title }}</h1>
+                    {{ about.content }}
                     <img src="img/Signature.svg" width="230" alt="" />
                 </div>
                 <div class="o-layout__item u-1/2@desktop">
                     <span class="u-about-border"></span>
-                    <img src="{{ asset('images/acerca-de-mi.jpg', 'theme') }}" width="400" alt="Imagen ilustrativa sobre mí" align="right" />
+                    {{ about.image|showimage(400, null) }}
                 </div>
             </div>
         </div>
     </section>
     <section id="experiencia" class="c-page-section c-page-section--alt">
+        {% setcontent jobs = "jobs" %}
         <div class="o-wrapper">
             <h4 class="u-subtitle">02</h4>
             <h1 class="u-title">Experiencia</h1>
             <ul class="c-timeline">
+                {% for item in jobs %}
                 <li class="c-timeline__node">
                     <div class="c-timeline__body">
-                        <span class="c-timeline__meta">April 2016 - Present</span>
-                        <h2 class="c-timeline__title">Geil, Danke! GmbH</h2>
-                        <h3 class="c-timeline__subtitle u-subtitle">Eines Web-Studios</h3>
+                        <span class="c-timeline__meta">{{ item.duration }}</span>
+                        <h2 class="c-timeline__title">{{ item.company }}</h2>
+                        <h3 class="c-timeline__subtitle u-subtitle">{{ item.area }}</h3>
                         <div class="c-timeline__content">
-                            <h4>Projektmanagement mit Scrum</h4>
-                            <p>Ständiges Verbessern des agilen Entwicklungsprozesses beispielsweise durch Grunt, Yeoman, GIT, JIRA und BrowserStack.</p>
+                            {% if item.position %}<h4>{{ item.position }}</h4>{% endif %}
+                            {{ item.body }}
                         </div>
                     </div>
                 </li>
-                <li class="c-timeline__node">
-                    <div class="c-timeline__body">
-                        <span class="c-timeline__meta">November 2014 - Mars 2016</span>
-                        <h2 class="c-timeline__title">Freelances</h2>
-                        <h3 class="c-timeline__subtitle u-subtitle">Designer Und Autor</h3>
-                        <div class="c-timeline__content">
-                            <p>Konzeption, Design und Produktion von Digitalen Magazinen mit InDesign, der Adobe Digital Publishing Suite und HTML5. Co-Autorin der Fachbücher "Digitales Publizieren für Tablets" und "Adobe Digital Publishing Suite" erschienen im dpunkt.verlag.</p>
-                        </div>
-                    </div>
-                </li>
-                <li class="c-timeline__node">
-                    <div class="c-timeline__body">
-                        <span class="c-timeline__meta">April 2014</span>
-                        <h2 class="c-timeline__title">konplan gmbh</h2>
-                        <h3 class="c-timeline__subtitle u-subtitle">IT-Consultant</h3>
-                        <div class="c-timeline__content">
-                            <h4>Systemarchitektur, Consulting</h4>
-                            <p>Konzeption und Modellierung von Systemen und APIs für Digital Publishing und Entitlement nach SOA</p>
-                        </div>
-                    </div>
-                </li>
+                {% endfor %}
             </ul>
         </div>
     </section>
