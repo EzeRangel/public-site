@@ -11,4 +11,10 @@
     }
   }
 
+  @include mq($until: $inuit-bp-name) {
+    .u-hidden\@#{$inuit-bp-name}-and-down {
+      display: none !important;
+    }
+  }
+
 }

@@ -5,14 +5,21 @@
 .c-timeline{
     margin: 0;
     list-style: none;
-    margin-left: $unit;
+
+    @include mq($from: tablet){
+        margin-left: $unit;
+    }
 }
 
     .c-timeline__node{
         padding-bottom: $unit-large;
-        padding-left: $unit-large + $unit;
+        padding-left: $unit-large;
         border-left: 2px solid #000;
         position: relative;
+
+        @include mq($from: tablet){
+            padding-left: $unit-large + $unit;
+        }
 
         &:before,
         &:after{

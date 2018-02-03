@@ -10,7 +10,15 @@
 }
 
 .u-heading{
-    @include inuit-font-size(80px, 70px);
+    @include inuit-font-size(55px, 70px);
+
+    @include mq($from: phablet){
+        @include inuit-font-size(65px, 70px);
+    }
+
+    @include mq($from: tablet){
+        @include inuit-font-size(80px, 70px);
+    }
 }
 
 .u-subtitle{

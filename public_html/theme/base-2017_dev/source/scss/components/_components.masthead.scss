@@ -9,8 +9,13 @@
 }
 
     .c-masthead__img{
+        height: 100vh;
         width: 100%;
         object-fit: cover;
+
+        @include mq($from: tablet){
+            height: auto;
+        }
     }
 
     .c-masthead__body{
