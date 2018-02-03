@@ -73,23 +73,7 @@
                             envíame un mensaje; yo encantado de platicar contigo.
                         </p>
                     </div>
-                    <form action="#" class="c-form">
-                        <div class="c-form__field">
-                            <label for="name">Nombre</label>
-                            <input id="name" type="text" class="c-form__input" />
-                        </div>
-                        <div class="c-form__field">
-                            <label for="email">Email</label>
-                            <input id="email" type="email" class="c-form__input" />
-                        </div>
-                        <div class="c-form__field">
-                            <label for="message">Mensaje</label>
-                            <textarea id="message" cols="30" rows="10" class="c-form__input"></textarea>
-                        </div>
-                        <div class="c-form__field">
-                            <button class="c-form__submit">Enviar mensaje</button>
-                        </div>
-                    </form>
+                    {{ boltforms('contact') }}
                 </div>
             </div>
         </div>

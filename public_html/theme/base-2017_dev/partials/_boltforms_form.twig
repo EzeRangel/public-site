@@ -4,10 +4,6 @@
  #}
 {% form_theme form 'boltforms_custom.twig' %}
 
-{% block boltforms_css %}
-<link href="{{ webpath }}/boltforms.css" rel="stylesheet" type="text/css" />
-{% endblock boltforms_css %}
-
 <div class="boltform">
 {% if debug %}
     <p class="boltform-error">[Debug] Notification debug mode enabled!</p>
@@ -33,14 +29,13 @@
     </script>
     {% endif %}
 
-    {{ form_start(form, {'attr': {'name': formname}}) }}
+    {{ form_start(form, {'attr': {'name': formname, 'class': 'c-form', 'action': '#contacto'}}) }}
         {{ form_errors(form) }}
 
         {% for key, value in fields  %}
             {% if value.config.name != 'submit' %}
-            <div class="boltforms-row{% if form[key].vars.attr.class is defined %} boltforms-{{ form[key].vars.attr.class }}-row{% endif %}">
+            <div class="c-form__field boltforms-row{% if form[key].vars.attr.class is defined %} boltforms-{{ form[key].vars.attr.class }}-row{% endif %}">
                 <span class="boltforms-label">{{ form_label(form[key]) }}</span>
-                <span class="boltforms-error">{{ form_errors(form[key]) }}</span>
                 {% set value = {} %}
                 {% if defaults[key]|default() %}
                     {% set value = { 'value': defaults[key]|default() } %}
@@ -58,7 +53,7 @@
             </ul>
             {% endif %}
 
-            <div class="boltform-row">
+            <div class="c-form__field boltform-row">
                 <label for="form_message" class="required">{{ recaptcha.label|trans({}, translation_domain) }}</label>
                 <script src="https://www.google.com/recaptcha/api.js?hl={{ htmllang() }}" async defer></script>
                 <div class="g-recaptcha" data-sitekey="{{ recaptcha.public_key }}"></div>
@@ -66,7 +61,7 @@
 
         {% endif %}
 
-        <div class="boltforms-row{% if form.submit.vars.attr.class is defined %} boltforms-{{ form.submit.vars.attr.class }}-row{% endif %}">
+        <div class="c-form__field boltforms-row{% if form.submit.vars.attr.class is defined %} boltforms-{{ form.submit.vars.attr.class }}-row{% endif %}">
             {{ form_widget(form.submit) }}
         </div>
 

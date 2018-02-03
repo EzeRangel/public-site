@@ -11,11 +11,11 @@ templates:
 
 # reCAPTCHa set up
 recaptcha:
-  enabled: false
-  label: "Please enter the reCaptcha text to prove you're a human"
-  public_key: ''
-  private_key: ''
-  error_message: "The CAPTCHA wasn't entered correctly. Please try again."
+  enabled: true
+  label: "Ingresa el reCaptcha"
+  public_key: '6Lc3KkQUAAAAAOLO1042xCbAu1Y6npWAIu_dBUEk'
+  private_key: '6Lc3KkQUAAAAACWl6AMT809uIaCI6sbRD5itN7dp'
+  error_message: "Vuelve a ingresar el captcha"
   theme: clean
 
 ## CSRF protection
@@ -69,7 +69,7 @@ uploads:
 # form can still enable it's own debug — specific for and to that form
 debug:
   enabled: true
-  address: noreply@example.com
+  address: ezerangel@live.com
 
 ## Example 1
 #
@@ -78,21 +78,17 @@ contact:
   notification:
     enabled: true
     debug: false
-    subject: Your message was submitted
+    subject: Hay un mensaje desde el sitio web
     from_name: name               # A field name, specified in the fields: section below
     from_email: email             # A field name, specified in the fields: section below
     replyto_name: name            # A field name, specified in the fields: section below
     replyto_email: email          # A field name, specified in the fields: section below
-    to_name: My Site              # Must be valid text
-    to_email: noreply@example.com # Must be valid email address
-    cc_name: Info Person
-    cc_email: info@example.com
-    bcc_name: Manager Person
-    bcc_email: manager@example.com
+    to_name: Eze Rangel              # Must be valid text
+    to_email: ezerangel@live.com # Must be valid email address
     attach_files: false
   feedback:
-    success: Message submission successful
-    error: There are errors in the form, please fix before trying to resubmit
+    success: ¡Gracias por tu mensaje! Tan pronto como lo vea te contesto
+    error: Hay errores en el formulario, por favor corrígelos y vuelve a intenarlo.
 #  database:
 #    contenttype: mycontenttype  # ContentType record to create
 #    table: bolt_secret_table    # Specific database table to write to
@@ -100,36 +96,31 @@ contact:
     name:
       type: text
       options:
-        required: true
-        label: Name
+        label: Nombre
         attr:
-          placeholder: Your name...
-        constraints: [ NotBlank, {Length: {'min': 3}} ]
+          class: 'c-form__input'
+        constraints: [ {Length: {'min': 3}} ]
     email:
       type: email
       options:
         required: true
-        label: Email address
+        label: Email
         attr:
-          placeholder: Your email...
+          class: 'c-form__input'
         constraints: [ NotBlank, Email ]
     message:
       type: textarea
       options:
         required: true
-        label: Your message
+        label: Mensaje
         attr:
-          placeholder: Your message...
-          class: myclass
-    needreply:
-      type: choice
-      options:
-        required: false
-        label: Do you want us to contact you back?
-        choices: [ Yes, No ]
-        multiple: false
+          class: 'c-form__input'
     submit:
       type: submit
+      options:
+        label: 'Enviar mensaje'
+        attr:
+          class: 'c-form__submit'
 
 ## Example 2
 #

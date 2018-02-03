@@ -5,9 +5,9 @@
  #   data       - The posted data
  #}
 {% import "boltforms_macros.twig" as macros %}
-<p>Hi,</p>
+<p>Hola,</p>
 
-<p>Somebody used the form on {{ paths.currenturl }} to send you a message. The posted data is as follows:</p>
+<p>Alguien envio un mensaje desde el sitio web:</p>
 <hr>
 {% for label, value in data -%}
     {%- if value is json -%}
@@ -28,6 +28,3 @@
         {%- endif -%}
     {%- endif -%}
 {%- endfor -%}
-
-<hr>
-<em>Sent by the <a href="https://github.com/GawainLynch/bolt-extension-boltforms">BoltForms</a> extension for <a href="https://bolt.cm">Bolt</a>.</em>
