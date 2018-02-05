@@ -68,7 +68,7 @@ uploads:
 # If enabled, ALL forms will go into debug mode.  However, when disabled an individual
 # form can still enable it's own debug — specific for and to that form
 debug:
-  enabled: true
+  enabled: false
   address: ezerangel@live.com
 
 ## Example 1
