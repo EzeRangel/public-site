@@ -16,3 +16,11 @@
         float: right;
     }
 }
+
+
+.u-heading-link{
+    @include inuit-font-size(14px);
+    display: block;
+    color: inherit;
+    margin-top: 10px;
+}

@@ -3,34 +3,25 @@
 {% setcontent record = 'blocks/404-not-found' %}
 
 {% block title %}
-    {{ record.title|default('404 not found') }}
+    <title>Página no encontrada | Ezequiel Rangel</title>
 {% endblock title %}
 
+{% block header %}
+{% endblock header %}
+
 {% block main %}
-    <div class="o-wrapper">
-        {# special case: See if we actually want the Styleguide. #}
-        {% if app.request.server.get('REQUEST_URI') == '/styleguide' %}
-            {{ include('styleguide.twig') }}
-        {% else %}
-            <h1>{{ record.title|default('404 not found') }}</h1>
-
-            {% if fields(record) %}
-                {{ fields(record) }}
-            {% else %}
-                <p>
-                    The requested page was not found.
-                </p>
-
-                <div class="o-box o-box--large">
-                    <h5>Add a Blocks record with slug '404-not-found' to customize this message. </h5>
-                    <p>If it's not showing up here, doublecheck that the <tt>slug</tt> is correct, and that the Block is published.</p>
-                    <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-            {% endif %}
-
-        {% endif %}
-    </div>
-
+    <section class="c-masthead">
+        <img src="{{ record.image|image }}" alt="Imagen para el background" class="c-masthead__img">
+        <div class="o-wrapper">
+            <div class="c-masthead__body">
+                <h4 class="u-subtitle">{{ record.title }}</h4>
+                <h1 class="u-heading">
+                    La página que buscas
+                    <br>
+                    no existe
+                    <a href="/" class="u-heading-link">Regresa al inicio</a>
+                </h1>
+            </div>
+        </div>
+    </section>
 {% endblock main %}

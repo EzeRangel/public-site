@@ -21,8 +21,8 @@ fields:
 # The default title and description. If these are left empty, the extension will use the
 # sitename and payoff, from the global config.yml
 default:
-    title: ""
-    description: ""
+    title: "Ezequiel Rangel"
+    description: "Consultor & Arquitecto Frontend"
 
 # Control who can view the more "scary" fields
 # allow:
