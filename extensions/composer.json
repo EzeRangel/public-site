@@ -28,7 +28,7 @@
         }
     },
     "require": {
-        "bobdenotter/seo": "^0.10.3",
+        "bobdenotter/seo": "^1.0",
         "bolt/boltforms": "^3.0"
     },
     "scripts": {
