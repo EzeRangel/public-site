@@ -7,9 +7,9 @@ var fs = require('fs');
 
 // Get Current Working Directory
 var path = require('path');
-//  we need this value                         we're here
-//       v                                         v
-// /project-name/public_html/theme/base-2016_dev/source
+//  we need this value                      we're here
+//       v                                     v
+// /project-name/public/theme/base-2016_dev/source
 var cwd = process.cwd().split(path.sep).reverse()[4];
 
 // Check for --production flag
@@ -195,7 +195,7 @@ gulp.task('default', function() {
   $.browserSync.init({
     port: 3000,
     proxy: {
-      target: 'http://'+cwd+'.dev/'
+      target: 'http://'+cwd+'.local/'
     },
     open: false
   });
