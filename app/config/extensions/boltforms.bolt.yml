@@ -98,7 +98,7 @@ contact:
       options:
         label: Nombre
         attr:
-          class: 'c-form__input'
+          class: 'c-form__input input'
         constraints: [ {Length: {'min': 3}} ]
     email:
       type: email
@@ -106,7 +106,7 @@ contact:
         required: true
         label: Email
         attr:
-          class: 'c-form__input'
+          class: 'c-form__input input'
         constraints: [ NotBlank, Email ]
     message:
       type: textarea
@@ -114,13 +114,13 @@ contact:
         required: true
         label: Mensaje
         attr:
-          class: 'c-form__input'
+          class: 'c-form__input input'
     submit:
       type: submit
       options:
         label: 'Enviar mensaje'
         attr:
-          class: 'c-form__submit'
+          class: 'c-form__submit btn is-primary'
 
 ## Example 2
 #

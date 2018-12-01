@@ -54,7 +54,10 @@
             {% endif %}
 
             <div class="c-form__field boltform-row">
-                <label for="form_message" class="required">{{ recaptcha.label|trans({}, translation_domain) }}</label>
+                <div class="balloon from-left">
+                    <label for="form_message" class="required">{{ recaptcha.label|trans({}, translation_domain) }}</label>
+                </div>
+                <!--  -->
                 <script src="https://www.google.com/recaptcha/api.js?hl={{ htmllang() }}" async defer></script>
                 <div class="g-recaptcha" data-sitekey="{{ recaptcha.public_key }}"></div>
             </div>

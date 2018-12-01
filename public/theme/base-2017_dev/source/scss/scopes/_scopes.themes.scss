@@ -1,0 +1,49 @@
+/* ==========================================================================
+   #THEMES
+   ========================================================================== */
+
+.t-nintendo{
+    .c-timeline__content{
+        > p{
+            @include inuit-font-size(12px);
+        }
+    }
+
+    .c-social-profile__data{
+        a{
+            @include inuit-font-size(12px);
+            display: block;
+            margin-bottom: $unit-small;
+            padding-left: $unit-large;
+        }
+    }
+
+    .c-form__submit{
+        font-family: "Press Start 2P";
+        width: auto;
+        border: none;
+
+    }
+
+
+    .u-heading,
+    .u-title{
+        font-family: "Press Start 2P";
+    }
+
+    .u-heading{
+        @include inuit-font-size(35px, 40px);
+
+        @include mq($from: phablet){
+            @include inuit-font-size(45px, 50px);
+        }
+
+        @include mq($from: tablet){
+            @include inuit-font-size(65px, 70px);
+        }
+    }
+
+    .u-title{
+        @include inuit-font-size(30px, 30px)
+    }
+}
