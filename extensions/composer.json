@@ -29,7 +29,8 @@
     },
     "require": {
         "bobdenotter/seo": "^1.0",
-        "bolt/boltforms": "^3.0"
+        "bolt/boltforms": "^3.0",
+        "bolt/jsonapi": "^3.4"
     },
     "scripts": {
         "post-autoload-dump": "Bolt\\Composer\\EventListener\\PackageEventListener::dump",
